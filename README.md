@@ -1,26 +1,17 @@
+
 # Pypad
 
-Pypad is a web application that integrates a Laravel 10 backend, a React frontend, and an OpenAI service app. The project consists of three main components, each housed in its own submodule within the repository. Additionally, the project utilizes Redux for state management in the frontend and includes C4 model diagrams to illustrate the system architecture.
-
-## Table of Contents
-
-- [Project Structure](#project-structure)
-- [Setup Instructions](#setup-instructions)
-- [Backend (Laravel 10)](#backend-laravel-10)
-- [Frontend (React)](#frontend-react)
-- [OpenAI Service App (Node.js)](#openai-service-app-nodejs)
-- [API Documentation](#api-documentation)
-- [C4 Model Diagrams](#c4-model-diagrams)
+Pypad is an online code editor and a web application that integrates a Laravel 10 backend, a React frontend, and an OpenAI service app. The project consists of three main components, each housed in its own submodule within the repository. Additionally, the project utilizes Redux for state management in the frontend and includes C4 model diagrams to illustrate the system architecture.
 
 ## Project Structure
 
 The repository contains the following submodules:
 
-- `backend-laravel`: The Laravel 10 backend application.
-- `frontend-react`: The React frontend application.
-- `openai-service-app`: A Node.js application that handles OpenAI API requests.
+- `pypad-back-end`: The Laravel 10 backend application.
+- `pypad-front-end`: The React frontend application.
+- `openai-service`: A Node.js application that handles OpenAI API requests.
 
-Additionally, the repository includes a folder named `c4-models` which contains C4 model diagrams (Level 1 and Level 2).
+Additionally, the repository includes a folder named `c4` which contains C4 model diagrams (Level 1 and Level 2).
 
 ## Setup Instructions
 
@@ -28,93 +19,99 @@ Additionally, the repository includes a folder named `c4-models` which contains 
 
 To clone the repository with all its submodules, use the following command:
 
-\`\`\`bash
-git clone --recurse-submodules <repository-url>
-\`\`\`
+```sh
+git clone --recurse-submodules https://github.com/amir-hilal/pypad.git
+```
 
 ### Backend (Laravel 10)
 
 1. Navigate to the backend directory:
 
-\`\`\`bash
-cd backend-laravel
-\`\`\`
+```sh
+cd pypad-back-end
+```
 
 2. Install dependencies:
 
-\`\`\`bash
+```sh
 composer install
-\`\`\`
+```
 
 3. Copy the example environment file and modify it according to your setup:
 
-\`\`\`bash
+```sh
 cp .env.example .env
-\`\`\`
+```
 
 4. Generate an application key:
 
-\`\`\`bash
+```sh
 php artisan key:generate
-\`\`\`
+```
 
 5. Run the database migrations:
 
-\`\`\`bash
+```sh
 php artisan migrate --seed
-\`\`\`
+```
 
 6. Start the development server:
 
-\`\`\`bash
+```sh
 php artisan serve
-\`\`\`
+```
 
 ### Frontend (React)
 
 1. Navigate to the frontend directory:
 
-\`\`\`bash
-cd frontend-react
-\`\`\`
+```sh
+cd pypad-front-end
+```
 
 2. Install dependencies:
 
-\`\`\`bash
+```sh
 npm install
-\`\`\`
+```
 
-3. Start the development server:
+3. Install the latest version of npm globally:
 
-\`\`\`bash
+```sh
+npm install npm@latest -g
+```
+
+4. Start the development server:
+
+```sh
 npm start
-\`\`\`
+```
 
 ### OpenAI Service App (Node.js)
 
 1. Navigate to the OpenAI service app directory:
 
-\`\`\`bash
-cd openai-service-app
-\`\`\`
+```sh
+cd openai-service
+```
 
 2. Install dependencies:
 
-\`\`\`bash
+```sh
 npm install
-\`\`\`
+```
 
 3. Copy the example environment file and modify it with your OpenAI API key:
 
-\`\`\`bash
+```sh
 cp .env.example .env
-\`\`\`
+```
 
 4. Start the server:
 
-\`\`\`bash
+```sh
 npm start
-\`\`\`
+```
 
 ## API Documentation
 
@@ -122,7 +119,10 @@ The API endpoints are documented using Postman. You can view the full documentat
 
 ## C4 Model Diagrams
 
-The repository includes C4 model diagrams to illustrate the system architecture. The diagrams are located in the `c4-models` folder and include:
+The repository includes C4 model diagrams to illustrate the system architecture. The diagrams are located in the `c4` folder and include:
 
-- `c4-level1.png`: Level 1 Context Diagram
-- `c4-level2.png`: Level 2 Container Diagram
+- `pypad-c4model-level1.png`: Level 1 Context Diagram
+  ![C4 Level 1](./c4/pypad-c4model-level1.png)
+- `pypad-c4model-level2.png`: Level 2 Container Diagram
+  ![C4 Level 2](./c4/pypad-c4model-level2.png)
+
