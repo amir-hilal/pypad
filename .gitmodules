@@ -1,0 +1,9 @@
+[submodule "pypad-back-end"]
+	path = pypad-back-end
+	url = https://github.com/abdallah-al-khaled/pypad-back-end.git
+[submodule "pypad-front-end"]
+	path = pypad-front-end
+	url = https://github.com/amir-hilal/pypad-front-end.git
+[submodule "openai-service"]
+	path = openai-service
+	url = https://github.com/amir-hilal/openai-service.git
